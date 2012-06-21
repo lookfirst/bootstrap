@@ -7,7 +7,6 @@
 // GLOBAL VALUES
 // --------------------------------------------------
 
-
 // Grays
 // -------------------------
 @black:                 #000;
@@ -39,7 +38,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @darkerOrange;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -50,7 +49,11 @@
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
 @baseFontSize:          13px;
+
 @baseFontFamily:        @sansFontFamily;
+@baseFontHeaderFamily:      "customFont", @sansFontFamily;
+@baseFontHeaderBoldFamily:  "customFontBold", @sansFontFamily;
+
 @baseLineHeight:        18px;
 @altFontFamily:         @serifFontFamily;
 
@@ -73,7 +76,7 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         #ccc;
 
-@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackground:              #08c;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
 
 @btnInfoBackground:                 #5bc0de;
