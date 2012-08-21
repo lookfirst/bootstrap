@@ -173,11 +173,14 @@
   .radio,
   input,
   select,
-  .controls-box,
   textarea {
     color: @textColor;
+  }
+  input,
+  select,
+  textarea {
     border-color: @borderColor;
-//    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
     &:focus {
       border-color: darken(@borderColor, 10%);
       // Write out in full since the lighten() function isn't easily escaped
