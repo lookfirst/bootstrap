@@ -118,10 +118,7 @@
 
         inside = /in/.test(placement)
 
-        $tip
-          .detach()
-          .css({ top: 0, left: 0, display: 'block' })
-          .insertAfter(this.$element)
+        $('body').prepend($tip.detach().css({ top: 0, left: 0, display: 'block' }))
 
         pos = this.getPosition(inside)
 
