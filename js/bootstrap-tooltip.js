@@ -118,7 +118,7 @@
         , actualHeight
         , placement
         , tp
-        , e = $.Event('show')
+        , e = $.Event('show.' + this.type)
 
       if (this.hasContent() && this.enabled) {
         this.$element.trigger(e)
@@ -161,7 +161,7 @@
         }
 
         this.applyPlacement(tp, placement)
-        this.$element.trigger('shown')
+        this.$element.trigger('shown.' + this.type)
       }
     }
 
@@ -223,7 +223,7 @@
   , hide: function () {
       var that = this
         , $tip = this.tip()
-        , e = $.Event('hide')
+        , e = $.Event('hide.' + this.type)
 
       this.$element.trigger(e)
       if (e.isDefaultPrevented()) return
@@ -245,7 +245,7 @@
         removeWithAnimation() :
         $tip.detach()
 
-      this.$element.trigger('hidden')
+      this.$element.trigger('hidden.' + this.type)
 
       return this
     }
